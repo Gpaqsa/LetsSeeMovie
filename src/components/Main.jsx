@@ -1,12 +1,12 @@
 import ListBox from "./ListBox";
 import WatchedBox from "./WatchedBox";
 
-const Main = ({ tempMovieData, tempWatchedData }) => {
+const Main = ({ movies, watched }) => {
   return (
     <>
       <main className="main">
-        <ListBox tempMovieData={tempMovieData} />
-        <WatchedBox tempWatchedData={tempWatchedData} />
+        <ListBox movies={movies} />
+        <WatchedBox watched={watched} />
       </main>
     </>
   );

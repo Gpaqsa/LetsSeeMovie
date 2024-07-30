@@ -1,14 +1,13 @@
 import Search from "./Search";
 import Logo from "./Logo";
 import NumResult from "./NumResult"
-const Navbar = () => {
-
+const Navbar = ({ movies }) => {
   return (
     <>
       <nav className="nav-bar">
-       <Logo/>
-        <Search/>
-        <NumResult/>
+        <Logo />
+        <Search />
+        <NumResult movies={movies} />
       </nav>
     </>
   );

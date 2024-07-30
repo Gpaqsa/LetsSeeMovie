@@ -2,9 +2,8 @@ import { useState } from "react";
 import MovieList from "./MovieList";
 import Button from "./Button";
 
-const ListBox = ({ tempMovieData }) => {
-  // eslint-disable-next-line no-unused-vars
-  const [movies, setMovies] = useState(tempMovieData);
+const ListBox = ({ movies }) => {
+  // console.log(movies);
   const [isOpen1, setIsOpen1] = useState(true);
 
   return (

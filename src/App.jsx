@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 
@@ -48,14 +49,16 @@ const tempWatchedData = [
   },
 ];
 
-
 export default function App() {
- 
+  // eslint-disable-next-line no-unused-vars
+  const [movies, setMovies] = useState(tempMovieData);
+  // eslint-disable-next-line no-unused-vars
+  const [watched, setWatched] = useState(tempWatchedData);
 
   return (
     <>
-      <Navbar />
-      <Main tempMovieData={tempMovieData} tempWatchedData={tempWatchedData} />
+      <Navbar movies={movies} />
+      <Main movies={movies} watched={watched} />
     </>
   );
 }

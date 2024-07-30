@@ -3,10 +3,9 @@ import Button from "./Button";
 import WatchedSummery from "./WatchedSummery";
 import WatchedMovieList from "./WatchedMovieList";
 
-const WatchedBox = ({ tempWatchedData }) => {
+const WatchedBox = ({ watched }) => {
   const [isOpen2, setIsOpen2] = useState(true);
   // eslint-disable-next-line no-unused-vars
-  const [watched, setWatched] = useState(tempWatchedData);
 
   return (
     <div className="box">
