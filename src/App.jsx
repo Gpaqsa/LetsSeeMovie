@@ -1,6 +1,18 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
+// import Search from "./Search";
+import Search from "./components/Search"
+import NumResult from "./components/NumResult";
+
+// import ListBox from "./components/ListBox";
+// import WatchedBox from "./components/WatchedBox";
+import Box from "./components/Box";
+
+import MovieList from "./components/MovieList";
+
+import WatchedSummery from "./components/WatchedSummery";
+import WatchedMovieList from "./components/WatchedMovieList";
 
 const tempMovieData = [
   {
@@ -57,8 +69,31 @@ export default function App() {
 
   return (
     <>
-      <Navbar movies={movies} />
-      <Main movies={movies} watched={watched} />
+      <Navbar>
+        <Search />
+        <NumResult movies={movies} />
+      </Navbar>
+      <Main>
+        {/* Second Version of prop drilling */}
+        {/* <Box element={<MovieList movies={movies} />} />
+        <Box
+          element={
+            <>
+              <WatchedSummery watched={watched} />
+              <WatchedMovieList watched={watched} />
+            </>
+          }
+        /> */}
+        <Box>
+          <MovieList movies={movies} />
+        </Box>
+        <Box>
+          <>
+            <WatchedSummery watched={watched} />
+            <WatchedMovieList watched={watched} />
+          </>
+        </Box>
+      </Main>
     </>
   );
 }
