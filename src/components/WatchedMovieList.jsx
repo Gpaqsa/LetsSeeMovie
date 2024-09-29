@@ -1,6 +1,6 @@
 import WatchedMovie from "./WatchedMovie";
 
-const WatchedMovieList = ({watched}) => {
+const WatchedMovieList = ({ watched }) => {
   return (
     <ul className="list">
       {watched.map((movie) => (
@@ -8,6 +8,6 @@ const WatchedMovieList = ({watched}) => {
       ))}
     </ul>
   );
-}
+};
 
 export default WatchedMovieList
